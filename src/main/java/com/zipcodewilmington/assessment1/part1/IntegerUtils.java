@@ -13,7 +13,7 @@ public class IntegerUtils {
     public static Integer getSumOfN(Integer n) {
         int result = 0;
         for (int x = 1; x <= n; x++)
-            result += sumOfDigits(x);
+            result += (x);
 
         return result;
 
@@ -26,9 +26,16 @@ public class IntegerUtils {
      * @return the product of all integers between 0 and not including `n`
      */
     public static Integer getProductOfN(Integer n) {
+        int product = 1;
+
+        while (n != 0) {
+            product = product * (n % 10);
+            n = n / 10;
+        }
+
+        return product;
 
 
-        return null;
         }
 
 

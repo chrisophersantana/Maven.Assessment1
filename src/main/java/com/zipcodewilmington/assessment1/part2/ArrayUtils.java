@@ -1,5 +1,10 @@
 package com.zipcodewilmington.assessment1.part2;
 
+import com.sun.tools.hat.internal.model.JavaObjectArray;
+
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -11,7 +16,18 @@ public class ArrayUtils {
      * Given an array of objects, named `objectArray`, and an object `objectToCount`, return the number of times the `objectToCount` appears in the `objectArray`
      */
     public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
-        return null;
+        Arrays.sort(objectArray);
+        int counter = 0;
+
+        for (int i = 0, length = objectArray.length - 1; i < length; i++) {
+            if (objectArray[i] == objectArray[i + 1]) {
+                counter++;
+            }
+        }
+
+        return counter;
+
+
     }
 
     /**
@@ -22,7 +38,11 @@ public class ArrayUtils {
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
 
-        return null;
+
+
+
+             return  null;
+
     }
 
     /**
@@ -31,7 +51,29 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     public static Object getMostCommon(Object[] objectArray) {
-        return null;
+        int count = 1, tempCount;
+        Object popular = objectArray[0];
+        Object temp = 0;
+        for (int i = 0; i < (objectArray.length - 1); i++)
+        {
+            temp =objectArray[i];
+            tempCount = 0;
+            for (int j = 1; j < objectArray.length; j++)
+            {
+                if (temp == objectArray[j])
+                    tempCount++;
+            }
+            if (tempCount > count)
+            {
+                popular = temp;
+                count = tempCount;
+            }
+        }
+        return popular;
+
+
+
+
     }
 
 
@@ -51,6 +93,9 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
+
+
+
         return null;
     }
 }
