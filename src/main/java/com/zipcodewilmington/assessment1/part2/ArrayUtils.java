@@ -1,9 +1,7 @@
 package com.zipcodewilmington.assessment1.part2;
 
-import com.sun.tools.hat.internal.model.JavaObjectArray;
 
 import java.util.Arrays;
-import java.util.stream.Stream;
 
 /**
  * Created by leon on 2/16/18.

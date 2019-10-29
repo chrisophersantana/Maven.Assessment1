@@ -30,13 +30,11 @@ public class BasicStringUtils {
      * @return string with identical contents, in reverse order, with first character capitalized
      */
     public static String reverseThenCamelCase(String str) {
+        String reverse = reverse(str);
+        String reverseAndCamel = camelCase(reverse);
 
-
-
-        return null;
+        return reverseAndCamel;
     }
-
-
     /**
      * @param str a string input from user
      * @return string with identical contents excluding first and last character
